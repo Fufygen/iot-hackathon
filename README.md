@@ -1,4 +1,4 @@
-# IoT Hackathon projects
+# Easterbot by Robo3 - IoT Hackathon projects
 This repository includes projects created during the CEE Microsoft IoT hackathon 2016 event by our Robo3 team.
 All projects are made with the Windows IoT extension for the UWP and run on Raspberry Pi2 with Explorer Hat and other sensors and devices specific to each project.
 
