@@ -10,8 +10,10 @@ Because the IoT hackathon took place one week before the Easter, we got an idea 
 
 # Technologies used
 - Windows IoT extension for the UWP
-- [https://www.projectoxford.ai/face](Microsoft Project Oxford Face API)
+- [Microsoft Project Oxford Face API](https://www.projectoxford.ai/face)
 
 # Devices and sensors used
-- 4-wheeled drivetrain
-- Robotic hand
+- 4-wheeled chassis for the Easterbot
+- 2 Microsoft power banks for powering the Easterbot - Microsoft Azure and Microsoft HoloLens
+- a robotic hand with 5 motors for 4 joints and 1 for pincer
+- lasers, photo resistors, relays, motor drivers, etc.  
