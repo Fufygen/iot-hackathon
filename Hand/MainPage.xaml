@@ -1,0 +1,62 @@
+<Page
+    x:Class="Hand.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Hand"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" KeyDown="Page_KeyDown" KeyUp="Page_KeyUp"
+    Name="page">
+   
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+            <CheckBox IsChecked="{Binding ElementName=page, Path=KeyboardControl, Mode=TwoWay}" Content="Keyboard control" KeyDown="CheckBox_KeyDown" KeyUp="CheckBox_KeyUp"/>
+            <CheckBox IsChecked="{Binding ElementName=page, Path=Record, Mode=TwoWay}" Content="Record" KeyDown="CheckBox_KeyDown" KeyUp="CheckBox_KeyUp"/>
+        </StackPanel>
+
+        <ListView  Name="CommandsList" Grid.Column="1" HorizontalAlignment="Right" Width="300" SelectionChanged="CommandsList_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock>
+                            <Run Text="{Binding MotorId}" />
+                            <Run Text=": " />
+                            <Run Text="{Binding Direction}" />
+                        </TextBlock>
+                        <TextBlock Grid.Row="1" Text="{Binding Duration}" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="1"  HorizontalAlignment="Right">
+                <AppBarButton Content="Clear" Icon="Clear" Click="Button_ClearCommands_Click"/>
+                <AppBarButton Content="Delete" HorizontalAlignment="Right" Icon="Delete" Name="DeleteButton" Click="Button_Delete_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <AppBarButton Content="Run" Icon="Play" Click="Button_PlayCommands_Click" />
+                <AppBarButton Content="Stop" Icon="Stop" Click="Button_Cancel_Click" />
+            <AppBarButton Content="Load" Icon="Download" Click="Button_LoadCommands_Click" />
+            <AppBarButton Content="Save" Icon="Save" Click="Button_SaveCommands_Click" />
+            </StackPanel>
+        </Grid>
+
+
+    </Grid>
+</Page>

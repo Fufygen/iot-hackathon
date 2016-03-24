@@ -1,0 +1,2 @@
+MainPackage=c:\users\localuser\documents\visual studio 2015\Projects\BackgroundApplication4\BackgroundApplication4\bin\x86\Debug\BackgroundApplication4_1.0.0.0_x86_Debug.appx
+SymbolPackage=c:\users\localuser\documents\visual studio 2015\Projects\BackgroundApplication4\BackgroundApplication4\AppPackages\BackgroundApplication4_1.0.0.0_Debug_Test\BackgroundApplication4_1.0.0.0_x86_Debug.appxsym
